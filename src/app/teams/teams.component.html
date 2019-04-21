@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <form>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+                <input type="text" class="form-control" name="searchString" placeholder="Type to search by name" [(ngModel)]="searchString">
+            </div>
+        </div>
+    </form>
+  
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">NAME</th>
+    <th scope="col">FULL NAME</th>
+    <th scope="col">CITY</th>
+    <th scope="col">ABBREVIATION</th>
+    <th scope="col">CONFERENCE</th>
+    <th scope="col">DIVISION</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let t of teamsList | filter : 'name' : searchString | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize ; index as i">
+    <th scope="row">{{ t?.id }}</th>
+    <td>{{ t?.name }}</td>
+    <td>{{ t?.full_name }}</td>
+    <td>{{ t?.city }}</td>
+    <td>{{ t?.abbreviation }}</td>
+    <td>{{ t?.conference }}</td>
+    <td>{{ t?.division }}</td>
+  </tr>
+  </tbody>
+</table>
+<div>
+  <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+  </ngb-pagination>
+  <pre>Current page: {{page}}</pre>
+</div>
+</div>

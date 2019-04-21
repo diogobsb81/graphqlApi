@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "npm-watch"
+  },
+  "author": "Diogo Braga",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-datasource-rest": "^0.3.2",
+    "apollo-server": "^2.2.2",
+    "graphql": "^14.0.2",
+    "nodemon": "^1.18.10",
+    "unirest": "^0.6.0"
+  }
+}
