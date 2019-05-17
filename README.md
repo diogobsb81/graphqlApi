@@ -1,4 +1,4 @@
-# USTWO TASK choose 7
+# GRAPHQL-API-ANGULAR CLIENT TASK choose 7
 
 This project its to present my self and a way that i lik to work.
 
